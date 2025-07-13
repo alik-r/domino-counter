@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Muggins 2P Score Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <section class="player" id="player0">
+            <h2 class="player-name" data-player="0" contenteditable="true">Player 1</h2>
+            <div class="player-score" data-player="0">0</div>
+            <div class="controls" data-player="0"></div>
+        </section>
+        <section class="player" id="player1">
+            <h2 class="player-name" data-player="1" contenteditable="true">Player 2</h2>
+            <div class="player-score" data-player="1">0</div>
+            <div class="controls" data-player="1"></div>
+        </section>
+    </div>
+
+    <button id="reset-scores">Reset Scores</button>
+    <button id="new-game">New Game</button>
+
+    <div id="history-modal" class="modal" hidden>
+        <div class="modal-content">
+            <button id="close-history">Close</button>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
