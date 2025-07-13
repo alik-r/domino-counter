@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const STORAGE_KEY = 'muggins_2p_game';
+  const STORAGE_KEY = 'domino-counter';
 
   function loadGame() {
     const raw = localStorage.getItem(STORAGE_KEY);
