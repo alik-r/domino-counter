@@ -4,18 +4,15 @@ html, body, #app {
   padding: 0;
 }
 
-/* App container: vertical split */
 #app {
   display: flex;
   flex-direction: column;
 }
 
-/* Rotate only the bottom section for opposing player orientation */
 #player0 {
   transform: rotate(180deg);
 }
 
-/* Each player section */
 .player {
   flex: 1;
   display: flex;
@@ -24,19 +21,16 @@ html, body, #app {
   align-items: center;
 }
 
-/* Player name */
 .player-name {
   font-size: 1.5rem;
   margin: 0.5rem;
 }
 
-/* Player score */
 .player-score {
   font-size: 2.5rem;
   margin: 0.5rem;
 }
 
-/* Controls container */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +39,6 @@ html, body, #app {
   margin-top: 1rem;
 }
 
-/* Buttons: increments, undo, history, reset & new game */
 .controls button,
 #reset-scores,
 #new-game {
@@ -64,7 +57,6 @@ html, body, #app {
   background-color: #0056b3;
 }
 
-/* Modal overlay */
 .modal {
   position: fixed;
   top: 0;
@@ -78,12 +70,10 @@ html, body, #app {
   z-index: 1000;
 }
 
-/* Hide modal when hidden attribute is present */
 .modal[hidden] {
   display: none;
 }
 
-/* Modal content box */
 #history-modal > .modal-content {
   background: #fff;
   max-height: 80%;
