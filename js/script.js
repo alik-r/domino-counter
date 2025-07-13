@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return {
       players: [
-        { name: 'Player 1', score: 0, history: [] },
-        { name: 'Player 2', score: 0, history: [] }
+        { name: 'Enter your name', score: 0, history: [] },
+        { name: 'Enter your name', score: 0, history: [] }
       ]
     };
   }
