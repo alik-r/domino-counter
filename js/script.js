@@ -46,11 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const undoBtn = document.createElement('button');
       undoBtn.textContent = 'Undo';
+      undoBtn.id = 'undo-btn';
       undoBtn.addEventListener('click', () => undoScore(index));
       controlsEl.appendChild(undoBtn);
 
       const histBtn = document.createElement('button');
       histBtn.textContent = 'History';
+      histBtn.id = 'hst-btn'
       histBtn.addEventListener('click', () => showHistory(index));
       controlsEl.appendChild(histBtn);
     });
