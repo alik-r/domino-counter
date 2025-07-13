@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const STORAGE_KEY = 'muggins_2p_game';
+  const STORAGE_KEY = 'domino-counter';
 
   function loadGame() {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     return {
       players: [
-        { name: 'Player 1', score: 0, history: [] },
-        { name: 'Player 2', score: 0, history: [] }
+        { name: 'Enter your name', score: 0, history: [] },
+        { name: 'Enter your name', score: 0, history: [] }
       ]
     };
   }
