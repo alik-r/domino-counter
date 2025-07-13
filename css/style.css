@@ -10,8 +10,8 @@ html, body, #app {
   flex-direction: column;
 }
 
-/* Rotate bottom section for opposing player orientation */
-#player1 {
+/* Rotate only the bottom section for opposing player orientation */
+#player0 {
   transform: rotate(180deg);
 }
 
@@ -22,13 +22,6 @@ html, body, #app {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/* Undo rotation of interactive children in bottom section */
-#player1 .player-name,
-#player1 .player-score,
-#player1 .controls {
-  transform: rotate(180deg);
 }
 
 /* Player name */
