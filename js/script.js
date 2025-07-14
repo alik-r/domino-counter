@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
       [5, 10, 15, 20, 25, 30, 35].forEach(inc => {
         const btn = document.createElement('button');
         btn.textContent = `+${inc}`;
+        btn.classList.add('score-btn');
+
+        const ratio = (inc - 5) / 30;
+        const r = Math.round(ratio * 255);
+        const g = Math.round((1 - ratio) * 255);
+        btn.style.background = `rgb(${r}, ${g}, 110)`;
         btn.addEventListener('click', () => addScore(index, inc));
         controlsEl.appendChild(btn);
       });
@@ -83,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     state.players[playerIndex].history.slice().reverse().forEach(entry => {
       const li = document.createElement('li');
-      const ts = new Date(entry.timestamp).toISOString().replace('T',' ').substring(0,19);
+      const ts = new Date(entry.timestamp).toISOString().replace('T', ' ').substring(0, 19);
       li.textContent = `+${entry.points} points @ ${ts}`;
       listEl.appendChild(li);
     });
