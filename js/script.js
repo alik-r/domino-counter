@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function render(state) {
     state.players.forEach((player, index) => {
       document.querySelector(`.player-name[data-player="${index}"]`).textContent = player.name;
-      document.querySelector(`.player-score[data-player="${index}"]`).textContent = player.score;
+      const scoreEl = document.querySelector(`.player-score[data-player="${index}"]`);
+      const last = player.history[player.history.length - 1];
+      scoreEl.innerHTML = `${player.score}` + (last ? ` <span class="last-added">(+${last.points})</span>` : '');
       const controlsEl = document.querySelector(`.controls[data-player="${index}"]`);
       controlsEl.innerHTML = '';
 
